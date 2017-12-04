@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas入门</title>
+</head>
+<body>
+<!--<p>1.canvas是html5新增元素，专门用来绘制图形</p>-->
+<!--<p>2.其自身并不绘制，只是充当了一个画布（容器），用Javascript来绘制图形，充当画笔。</p>-->
+<canvas id="mycanvas" width="500" height="500" style="border:1px solid ;">您的浏览器不支持canvas</canvas>
+<script>
+    //注意：
+    // 1.canvas对应的js有一个canvas对象，getContext('2d');
+    //2.canvas是可以设置它的宽和高的。但是它是有默认的宽和高的，300*150。
+    //3.混淆点：不要用style样式，或者更通俗来讲css样式，去对canvas限制宽和高，会造成图像失真。
+    //4.记着加上这样一句话，来考虑canvas的兼容性。
+    //5.id是必要的
+
+    //canvas绘图三步走：
+    //1.首先获取一个canvas对象
+    //2.拿到js画笔，实质获取getContext('2d'),
+    //3.画图
+    var cas = document.getElementById('mycanvas');
+    var cax = cas.getContext('2d');
+    cax.fillRect(100,150,50,30);
+</script>
+</body>
+</html>

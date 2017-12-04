@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas入门2</title>
+</head>
+<body>
+<canvas id="mycanvas" width="500" height="500" style="border:1px solid">您的浏览器不支持canvas</canvas>
+<script>
+    //装逼指南
+    var cas = document.getElementById('mycanvas');
+//    确定浏览器支持<canvas>元素
+    if(cas.getContext('2d')){
+        var cax = cas.getContext('2d');
+        //绘制实心和空心矩形的方法
+        //注意：
+        // 1.stroke***()绘制空心***
+        // 2.fill***()绘制实心***
+        // 3.strokeStyle & fillStyle的位置要放在绘图前，获取对象后。
+        // 4.strokeStyle & fillStyle的对应关系。
+        // 5.注意所有操作属性的驼峰写法。
+//        cax.strokeStyle='red';
+//        cax.fillStyle='blue';
+//        cax.strokeRect(100,150,50,30);
+        cax.fillRect(20,20,50,30);
+        cax.fillStyle='blue';
+    }else{
+        //code
+    }
+</script>
+</body>
+</html>
